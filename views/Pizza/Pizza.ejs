@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Link rel="stylesheet" href="../Pizza/Pizza.css"></Link>
+
+</head>
+
+<body>
+    <main>
+        <dev id="devNameResto" class="devNameResto">
+            <h1 id="nameResto" class="nameResto"> P i z z a</h1>
+        </dev>
+        <dev class="pizzaDev">
+            <% Pizzas.forEach(item => { %>
+                <ul>
+                    <img src="<%= item.imageUrl %>" alt="<%= item.title %>">
+                    <li>
+                        <h2>
+                            <%= item.title %>
+                        </h2>
+                        <p>Price: $
+                            <%= item.price %>
+                        </p>
+                        <p>Size:
+
+
+                        </p>
+                        <p>Category:
+                            <%= item.category %>
+                        </p>
+                        <p>Rating:
+                            <%= item.rating %>
+                        </p>
+                    </li>
+
+                </ul>
+                <a class="button" href="#" style="--color: #1e9bff;">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>Enjoin
+                </a>
+
+                <% }) %>
+        </dev>
+    </main>
+
+
+    <%- include('../partials/footer') %>
+
+</body>
+
+</html>

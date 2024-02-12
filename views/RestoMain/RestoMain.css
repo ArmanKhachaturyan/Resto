@@ -1,0 +1,108 @@
+body {
+    background-image: url(../img/71w8iOwPYEL.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    white-space: normal;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.devNameResto {
+    display: flex;
+    justify-content: center;
+    width: 65%;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    justify-content: center;
+    box-shadow: 0 0 40px rgba(7, 8, 16, 0.6);
+}
+
+.devMenuName {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+}
+
+.devMenu {
+    width: 85%;
+    display: flex;
+    justify-content: center;
+}
+
+.menuName {
+    color: gold;
+}
+
+.itemDev {
+    width: 50%;
+    margin: 2%;
+    display: grid;
+    justify-content: center;
+    margin: 5%;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    justify-content: center;
+    box-shadow: 0 0 40px rgba(44, 48, 75, 0.6);
+    color: azure;
+}
+
+.itemDev:hover {
+    transform: scale(1.1);
+}
+
+.nameResto {
+    color: azure;
+    padding: 2%;
+}
+
+.contact-details,
+.library-hours,
+.helpful-links {
+    width: 30%;
+}
+
+a {}
+
+img {
+    width: 55%;
+    border-radius: 25%;
+    margin: 3%;
+}
+
+footer {
+    background-color: #333;
+    color: gray;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    text-decoration: none;
+    color: azure;
+    padding: 2%;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 10px;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+footer a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}

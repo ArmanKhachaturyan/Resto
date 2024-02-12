@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resto</title>
+    <Link rel="stylesheet" href="./RestoMain/RestoMain.css"></Link>
+
+</head>
+
+<body>
+
+
+
+    <main>
+        <dev id="devNameResto" class="devNameResto">
+            <h1 id="nameResto" class="nameResto"> R e s t o r a n t s</h1>
+        </dev>
+        <dev class="devMenuName">
+            <h2 id="menuName" class="menuName">Menu</h2>
+        </dev>
+        <dev class="devMenu">
+            <% MenuItem.forEach(item => { %>
+                <a href="/pizza/<%=item._id %>">
+                    <dev class="itemDev">
+                        <img src="../img/Pizza.jpeg" alt="">
+                        <%= item.name %> - $
+                            <%= item.is_available %>
+
+                    </dev>
+                </a>
+
+                <% }) %>
+        </dev>
+
+
+    </main>
+
+
+    <%- include('../partials/footer') %>
+
+</body>
+
+</html>
