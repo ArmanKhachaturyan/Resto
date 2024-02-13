@@ -21,7 +21,9 @@ app.use(express.static(path.join(__dirname, 'views')));
 mongoose.connect('mongodb+srv://armankhachaturians:arm9803.@cluster0.c8dl5vs.mongodb.net/resto_Menu')
     .then(() => console.log('Connected to MongoDB'))
     .catch(err => console.error('Error connecting to MongoDB', err));
-
+app.get('/', (req, res) => {
+    res.redirect('/resto'); // Redirect to the "/home" route
+});
 app.get('/resto', restoControlers.getRestoMenu)
 app.get('/pizzas:id', restoControlers.getRestoDetails)
 app.get('/pizzas', restoControlers.getMenuPizza);
@@ -29,7 +31,7 @@ app.get('/pizzas', restoControlers.getMenuPizza);
 
 // Start the server
 db();
-const PORT = process.env.PORT || 4568;
+const PORT = process.env.PORT || 1177;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });

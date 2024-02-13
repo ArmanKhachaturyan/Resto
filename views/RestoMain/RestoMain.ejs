@@ -4,30 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resto</title>
+    <title>Restorants</title>
+    <link rel="icon" href="../img/restoranLogo.jpeg">
+
     <Link rel="stylesheet" href="./RestoMain/RestoMain.css"></Link>
 
 </head>
 
 <body>
 
-
-
     <main>
         <dev id="devNameResto" class="devNameResto">
-            <h1 id="nameResto" class="nameResto"> R e s t o r a n t s</h1>
+            <img class="restoranLogo" src="../img/restoranLogo.jpeg">
+            <p id="nameResto" class="nameResto"> R E S T O R A N T</p>
         </dev>
         <dev class="devMenuName">
-            <h2 id="menuName" class="menuName">Menu</h2>
+            <p id="menuName" class="menuName">Menu</p>
         </dev>
         <dev class="devMenu">
             <% MenuItem.forEach(item => { %>
-                <a href="/pizza/<%=item._id %>">
+                <a href="/pizzas/<%=item.menu._id %>">
                     <dev class="itemDev">
-                        <img src="../img/Pizza.jpeg" alt="">
-                        <%= item.name %> - $
-                            <%= item.is_available %>
+                        <img class="divMenuImg" src="../img/Pizza.jpeg" alt="">
+                        <dev class="nameRestoMenu">
+                            <%= item.name %> - $
 
+                                <%= item.is_available %>
+                        </dev>
                     </dev>
                 </a>
 

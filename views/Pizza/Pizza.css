@@ -14,7 +14,21 @@
         flex-wrap: wrap;
     }
     
+    .globalName {
+        display: flex;
+        width: 100%;
+    }
+    
     .devNameResto {
+        width: 25%;
+        display: flex;
+    }
+    
+    .nameResto {
+        color: gold;
+    }
+    
+    .devNameRestoPizza {
         display: flex;
         justify-content: center;
         width: 65%;
@@ -28,10 +42,9 @@
         box-shadow: 0 0 40px rgba(7, 8, 16, 0.6);
     }
     
-    .devMenuName {
-        display: flex;
-        justify-content: center;
-        width: 70%;
+    .NameRestoPizza {
+        padding: 3%;
+        color: cornsilk;
     }
     
     .pizzaDev {
@@ -188,7 +201,6 @@
         padding: 5%;
     }
     
-    h1,
     p,
     h2 {
         color: azure;
