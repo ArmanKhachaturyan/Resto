@@ -7,8 +7,12 @@ const PizzaSchema = new mongoose.Schema({
     types: [Number],
     sizes: [Number],
     price: Number,
-    category: Number,
-    rating: Number
+    rating: Number,
+    isFavorite: Boolean,
+    description: [String],
+    textarea: String,
+    notes: [String]
+
 });
 
 const Pizzas = mongoose.model('PizzaSchema', PizzaSchema);

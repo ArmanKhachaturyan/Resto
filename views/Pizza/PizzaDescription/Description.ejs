@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Description</title>
+    <Link rel="stylesheet" href="../../Pizza/PizzaDescription/Description.css"></Link>
+
+</head>
+
+<body>
+
+
+    <main>
+
+        <dev class="globalName">
+            <dev id="devNameResto" class="devNameResto">
+                <img class="restoranLogo" src="../img/restoranLogo.jpeg">
+                <p id="nameResto" class="nameResto"> R E S T A U R A N </p>
+            </dev>
+            <dev id="devNameRestoPizza" class="devNameRestoPizza">
+                <h1 id="nameResto" class="NameRestoPizza">
+                    <%= Pizzas.title %>
+                </h1>
+            </dev>
+        </dev>
+        <dev class="descriptionPizzaDev">
+            <dev class="imgDevPizza"> <img class="imgPizza" src="<%= Pizzas.imageUrl %>"></dev>
+            <dev class="descriptionPizza">
+                <dev></dev>
+                <dev class="descriptionPizzaName">
+                    <p>Price:
+                        <%= Pizzas.price %>
+                            <input class="checkbox" type="checkbox">
+
+                    </p>
+                    <p>Size:
+                        <%= Pizzas.size %>
+                            <input class="checkbox" type="checkbox">
+
+                    </p>
+
+                    <p>Rating:
+                        <%= Pizzas.rating %>
+                            <input class="checkbox" type="checkbox">
+
+                    </p>
+                    <dev>
+                        <p>Description:
+                            <% Pizzas.description.forEach(desc => {  %>
+                                <li>
+                                    <%= desc %>
+                                        <input class="checkbox" type="checkbox">
+
+                                </li>
+                                <% console.log(desc) %>
+                                    <%})  %>
+
+                        </p>
+                    </dev>
+
+                </dev>
+                <form action="/pizzas" method="post" class="descriptionPizzaNameForm">
+
+
+
+
+                </form>
+                <button class="descriptionButton" type="submit ">Add Pizza</button>
+
+            </dev>
+
+            <form action="/description/<%= Pizzas._id %>/addNote" method="post" class="textareaDev">
+                <label class="CoverLetter">Cover Letter</label>
+                <textarea name="note" placeholder="Enter your note"></textarea>
+                <dev class="textareaButtonDev"> <button class="textareaButton" type="submit">Add Note</button></dev>
+            </form>
+        </dev>
+
+
+    </main>
+
+    <%- include('../../partials/footer') %>
+
+</body>
+
+</html>

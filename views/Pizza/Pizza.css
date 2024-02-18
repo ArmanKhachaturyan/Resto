@@ -28,7 +28,7 @@ main {
 }
 
 .devNameResto {
-    width: 25%;
+    width: 30%;
     display: flex;
 }
 
@@ -39,7 +39,7 @@ main {
 .devNameRestoPizza {
     display: flex;
     justify-content: center;
-    width: 65%;
+    width: 50%;
     position: relative;
     overflow: hidden;
     transition: transform 0.3s;
@@ -63,19 +63,20 @@ main {
 }
 
 .iconFavorite {
-    width: 10%;
-    height: 10%;
+    width: 30%;
+    height: 30%;
     border: none;
     background-color: initial;
-    margin: 10%;
+    margin: 30%;
 }
 
-.iconFavoriteImg {
+.iconFavoriteImg,
+.favorite-btn-tru {
     width: 80%;
     background-color: gold;
 }
 
-.iconFavoriteImg:hover {
+.favorite-btn-false {
     background-color: brown;
 }
 
@@ -91,7 +92,6 @@ main {
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     transition: 0.5s;
-    z-index: 1;
 }
 
 .button:hover {
@@ -210,11 +210,12 @@ ul {
     box-shadow: 0 0 40px rgba(7, 8, 16, 0.6);
 }
 
-li {
+.li {
     margin: 2%;
+    padding: 10%;
 }
 
-li:hover {
+.li:hover {
     position: relative;
     overflow: hidden;
     transition: transform 0.3s;
@@ -229,6 +230,7 @@ li:hover {
 p,
 h2 {
     color: azure;
+    padding: 10%;
 }
 
 img {

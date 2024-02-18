@@ -4,12 +4,12 @@ const path = require('path');
 const restoControlers = require('./controllers/restoControllers')
 const mongoose = require('mongoose');
 const MenuItems = require('./models/Schema');
-// const img = require("./models/imgSchema")
-
+const bodyParser = require('body-parser');
 
 // Create an Express application
 const app = express();
 const db = require('./models/db')
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Set EJS as the view engine
 app.set('view engine', 'ejs');
@@ -27,11 +27,13 @@ app.get('/', (req, res) => {
 app.get('/resto', restoControlers.getRestoMenu)
 app.get('/pizzas:id', restoControlers.getRestoDetails)
 app.get('/pizzas', restoControlers.getMenuPizza);
-
-
-// Start the server
+app.post('/pizzas/:id/favorite', restoControlers.pizaaFavoritesAdd)
+app.post('/pizzas/:id/unfavorite', restoControlers.pizaaFavoritesRemove)
+app.get("/description/:id", restoControlers.getDescription)
+app.post("/description/:id/addNote", restoControlers.postTextarea)
+    // Start the server
 db();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
